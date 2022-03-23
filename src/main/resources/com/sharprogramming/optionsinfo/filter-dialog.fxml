@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1"
+          fx:controller="com.sharprogramming.optionsinfo.FilterDialog">
+   <columnConstraints>
+      <ColumnConstraints hgrow="NEVER"/>
+      <ColumnConstraints hgrow="NEVER"/>
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints vgrow="NEVER"/>
+      <RowConstraints vgrow="NEVER"/>
+   </rowConstraints>
+   <CheckBox fx:id="minCheckbox" mnemonicParsing="false" text="Minimum"/>
+   <Spinner GridPane.columnIndex="1" fx:id="minSpinner"/>
+   <CheckBox fx:id="maxCheckbox" mnemonicParsing="false" text="Maximum" GridPane.rowIndex="1"/>
+   <Spinner fx:id="maxSpinner" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+</GridPane>

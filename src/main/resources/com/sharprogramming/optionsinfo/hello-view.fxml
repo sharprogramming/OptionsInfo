@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sharprogramming.optionsinfo.HelloController">
+    <GridPane alignment="TOP_CENTER" style="-fx-padding: 8,8,8,8">
+        <columnConstraints>
+            <ColumnConstraints hgrow="NEVER" />
+            <ColumnConstraints hgrow="NEVER" />
+            <ColumnConstraints hgrow="NEVER" />
+            <ColumnConstraints hgrow="NEVER" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints vgrow="NEVER" />
+            <RowConstraints vgrow="NEVER" />
+            <RowConstraints vgrow="NEVER" />
+        </rowConstraints>
+        <Label style="-fx-padding: 4,0,0,4;" text="Symbol" />
+        <Label style="-fx-padding: 4,0,0,4;" text="Underlying Price" GridPane.rowIndex="1">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets></Label>
+        <ChoiceBox fx:id="expChoiceBox" onAction="#updateExpDate" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+        <Label style="-fx-padding: 4,0,0,4;" text="Expiration Date" GridPane.rowIndex="2" />
+        <Label fx:id="symbolLabel" text="Label" GridPane.columnIndex="1" />
+        <Label fx:id="priceLabel" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+        <Label text="Pricing Model" GridPane.columnIndex="2" />
+        <ChoiceBox fx:id="pricingModelChoiceBox" onAction="#updatePricingModel" GridPane.columnIndex="3" GridPane.rowIndex="0" />
+        <Button onAction="#refresh" text="Refresh" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+    </GridPane>
+    <TableView fx:id="tableView">
+      <columns>
+      </columns>
+    </TableView>
+</VBox>
